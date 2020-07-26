@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style type="text/css">
+    .card{
+        max-width: 700px
+    }
+    .container{
+        padding: 20px
+    }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <!--Blog Post-->
+        {% include 'snippets/card.html' with blog_post=blog_post %}
+        {% comment %} blog_post_image_url=blog_post.image.url blog_post_title=blog_post.title blog_post_body=blog_post.body|safe blog_post_date_updated=blog_post.date_updated blog_post_author=blog_post.author {% endcomment %}
+        <!--end Blog Post-->
+    </div>
+</div>
+{% endblock content %}
